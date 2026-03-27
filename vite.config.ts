@@ -5,5 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/bpm_checker/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [vue(), tailwindcss()],
 })
