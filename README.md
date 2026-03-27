@@ -3,6 +3,8 @@
 MP3ファイルをアップロードして、BPM・Key・Alt Keyを解析するWebアプリ。
 サーバー不要、ブラウザ内で完結。
 
+**Demo**: https://generonishimura.github.io/bpm_checker/
+
 ## 機能
 
 - MP3ファイルのドラッグ＆ドロップまたはクリックでアップロード
@@ -19,6 +21,7 @@ MP3ファイルをアップロードして、BPM・Key・Alt Keyを解析するW
 - Tailwind CSS v4
 - Web Audio API（音声デコード・FFT）
 - Vitest（テスト）
+- GitHub Actions → GitHub Pages（自動デプロイ）
 
 ## 開発
 
@@ -38,3 +41,7 @@ npx vitest run
 ```bash
 npm run build
 ```
+
+## デプロイ
+
+`main` ブランチへのpushで GitHub Pages に自動デプロイされる。
