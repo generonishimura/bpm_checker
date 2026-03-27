@@ -1,5 +1,40 @@
-# Vue 3 + TypeScript + Vite
+# BPM Checker
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+MP3ファイルをアップロードして、BPM・Key・Alt Keyを解析するWebアプリ。
+サーバー不要、ブラウザ内で完結。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 機能
+
+- MP3ファイルのドラッグ＆ドロップまたはクリックでアップロード
+- **BPM検出** — 3つのアルゴリズムで判定、中央値を採用
+  - Autocorrelation / Onset Interval / Spectral Flux
+- **Key検出** — 3つのプロファイルで判定、多数決を採用
+  - Krumhansl-Kessler / Temperley / Sha'ath
+- **信頼度表示** — アルゴリズムの一致度に基づく（High / Medium / Low）
+- Alt Key（相対調）の表示
+
+## 技術スタック
+
+- Vue 3 + TypeScript + Vite
+- Tailwind CSS v4
+- Web Audio API（音声デコード・FFT）
+- Vitest（テスト）
+
+## 開発
+
+```bash
+npm install
+npm run dev
+```
+
+## テスト
+
+```bash
+npx vitest run
+```
+
+## ビルド
+
+```bash
+npm run build
+```

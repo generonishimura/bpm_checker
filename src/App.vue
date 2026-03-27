@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import type { AnalysisResult, Confidence } from './domain/types'
 import { analyzeAudio } from './domain/audio-analyzer'
 
